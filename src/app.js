@@ -34,6 +34,7 @@ App.use(cors({
 
   // origin: 'https://a-c-soluciones.vercel.app', 
   origin: [
+    '*',
     'http://localhost:3000',
     'http://localhost:5173',
   ],
