@@ -17,7 +17,6 @@ import VisitaRouter from './routers/visita.routes.js';
 import fichaRouter from './routers/ficha.routes.js';
 import fichaClienteRouter from './routers/ficha.routes.js'; 
 import FaqRouter from './routers/preguntas_frecuentes.routes.js';
-import ContabilidadRouter from './routers/contabilidad.routes.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -30,16 +29,36 @@ App.use(morgan('dev'));
 App.use(express.json());
 
 // configuracion de CORS
-App.use(cors({
+//App.use(cors({
+//  origin: [
+//    '*',
+//    'https://a-c-soluciones.vercel.app'
+//  ],
+//  credentials: true
+//}));
 
-  // origin: 'https://a-c-soluciones.vercel.app', 
-  origin: [
-    '*',
-    'http://localhost:3000',
-    'http://localhost:5173',
-  ],
+App.use(cors({
+ origin: function (origin, callback) {
+    const allowedOrigins = [
+     'https://a-c-soluciones.vercel.app',
+     'capacitor://localhost',
+      'http://localhost:3000',
+      'http://127.0.0.1:3000'
+    ];
+
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      console.warn(`❌ CORS bloqueado para origen: ${origin}`);
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true
 }));
+
+
+
+
 
 // rutas de la API
 App.use(AministradorRouter)
@@ -49,9 +68,6 @@ App.use(UsuarioRouter);
 App.use(ServicioRouter); 
 App.use(SolicitudRouter);
 App.use(VisitaRouter);
-App.use(ContabilidadRouter);
-
-// debes de mejorar la forma en la que defines la ruta, porque se esta saliendo del estandar que tenemos 
 App.use('/fichas', fichaClienteRouter);
 
 App.use('/fichas', express.static(path.resolve('uploads/fichas'))); // Cliente puede ver su PDF
