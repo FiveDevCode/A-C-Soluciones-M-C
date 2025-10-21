@@ -1,4 +1,4 @@
-// src/models/admin.model.js
+// src/models/adminastrador.model.js
 import { DataTypes } from 'sequelize';
 import { sequelize } from '../database/conexion.js';
 import { encryptPasswordHook } from '../hooks/encryptPassword.js';
