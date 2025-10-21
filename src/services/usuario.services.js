@@ -3,7 +3,6 @@ import jwt from 'jsonwebtoken';
 import { AdminModel } from '../models/administrador.model.js';
 import { ClienteModel } from '../models/cliente.model.js';
 import { TecnicoModel } from '../models/tecnico.model.js';
-import { ContabilidadModel } from '../models/contabilidad.model.js';
 import SibApiV3Sdk from 'sib-api-v3-sdk'
 
 export class AuthService {
@@ -14,7 +13,7 @@ export class AuthService {
         throw new Error('Correo y contraseña son requeridos');
       }
 
-      const [admin, cliente, tecnico, contabilidad] = await Promise.all([
+      const [admin, cliente, tecnico] = await Promise.all([
         AdminModel.Admin.findOne({
           where: { correo_electronico: correo.trim().toLowerCase() },
           attributes: ['id', 'nombre', 'correo_electronico', 'contrasenia', 'rol', 'estado']
@@ -27,13 +26,10 @@ export class AuthService {
           where: { correo_electronico: correo.trim().toLowerCase() },
           attributes: ['id', 'nombre', 'correo_electronico', 'contrasenia', 'especialidad', 'rol', 'estado']
         }),
-        ContabilidadModel.Contabilidad.findOne({
-          where: { correo_electronico: correo.trim().toLowerCase() },
-          attributes: ['id', 'nombre', 'correo_electronico', 'contrasenia', 'rol', 'estado']
-        })
+        
       ]);
 
-      const user = admin || cliente || tecnico || contabilidad;
+      const user = admin || cliente || tecnico;
       if (!user) {
         throw new Error('Usuario no encontrado');
       }
@@ -51,9 +47,7 @@ export class AuthService {
         throw new Error('El cliente no está activo para ingresar al sistema');
       }
 
-      if (contabilidad?.correo_electronico && contabilidad.estado === 'inactivo') {
-        throw new Error('El Contador no está activa para ingresar al sistema');
-      }
+      
 
       // Verificación de contraseña con hash
       if (!user.contrasenia?.startsWith('$2b$')) {
