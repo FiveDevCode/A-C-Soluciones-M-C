@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1761238942754" clover="3.2.0">
-  <project timestamp="1761238942754" name="All files">
-    <metrics statements="1298" coveredstatements="1204" conditionals="479" coveredconditionals="397" methods="285" coveredmethods="264" elements="2062" coveredelements="1865" complexity="0" loc="1298" ncloc="1298" packages="6" files="54" classes="54"/>
+<coverage generated="1761322174364" clover="3.2.0">
+  <project timestamp="1761322174364" name="All files">
+    <metrics statements="1291" coveredstatements="1213" conditionals="479" coveredconditionals="399" methods="278" coveredmethods="265" elements="2048" coveredelements="1877" complexity="0" loc="1291" ncloc="1291" packages="6" files="53" classes="53"/>
     <package name="controllers">
       <metrics statements="609" coveredstatements="586" conditionals="212" coveredconditionals="185" methods="82" coveredmethods="79"/>
       <file name="administrador.controller.js" path="C:\Users\USUARIO\Desktop\BackendMoviles\A-C-Soluciones-M-C\src\controllers\administrador.controller.js">
@@ -694,7 +694,7 @@
       </file>
     </package>
     <package name="models">
-      <metrics statements="97" coveredstatements="95" conditionals="60" coveredconditionals="58" methods="32" coveredmethods="31"/>
+      <metrics statements="97" coveredstatements="97" conditionals="60" coveredconditionals="60" methods="32" coveredmethods="32"/>
       <file name="administrador.model.js" path="C:\Users\USUARIO\Desktop\BackendMoviles\A-C-Soluciones-M-C\src\models\administrador.model.js">
         <metrics statements="28" coveredstatements="28" conditionals="22" coveredconditionals="22" methods="11" coveredmethods="11"/>
         <line num="6" count="21" type="stmt"/>
@@ -819,11 +819,11 @@
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
       <file name="visita.model.js" path="C:\Users\USUARIO\Desktop\BackendMoviles\A-C-Soluciones-M-C\src\models\visita.model.js">
-        <metrics statements="4" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="107" count="2" type="stmt"/>
+        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="19" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="107" count="3" type="stmt"/>
       </file>
     </package>
     <package name="repository">
@@ -1026,7 +1026,7 @@
       </file>
     </package>
     <package name="routers">
-      <metrics statements="81" coveredstatements="74" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <metrics statements="81" coveredstatements="81" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
       <file name="administrador.routes.js" path="C:\Users\USUARIO\Desktop\BackendMoviles\A-C-Soluciones-M-C\src\routers\administrador.routes.js">
         <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="5" count="1" type="stmt"/>
@@ -1068,14 +1068,14 @@
         <line num="30" count="1" type="stmt"/>
       </file>
       <file name="preguntas_frecuentes.routes.js" path="C:\Users\USUARIO\Desktop\BackendMoviles\A-C-Soluciones-M-C\src\routers\preguntas_frecuentes.routes.js">
-        <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
       </file>
       <file name="servicio.routes.js" path="C:\Users\USUARIO\Desktop\BackendMoviles\A-C-Soluciones-M-C\src\routers\servicio.routes.js">
         <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -1137,7 +1137,7 @@
       </file>
     </package>
     <package name="services">
-      <metrics statements="302" coveredstatements="244" conditionals="131" coveredconditionals="83" methods="89" coveredmethods="75"/>
+      <metrics statements="295" coveredstatements="244" conditionals="131" coveredconditionals="83" methods="82" coveredmethods="75"/>
       <file name="administrador.services.js" path="C:\Users\USUARIO\Desktop\BackendMoviles\A-C-Soluciones-M-C\src\services\administrador.services.js">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="8"/>
         <line num="6" count="7" type="stmt"/>
@@ -1169,16 +1169,6 @@
         <line num="41" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="42" count="1" type="stmt"/>
         <line num="44" count="2" type="stmt"/>
-      </file>
-      <file name="contabilidad.services.js" path="C:\Users\USUARIO\Desktop\BackendMoviles\A-C-Soluciones-M-C\src\services\contabilidad.services.js">
-        <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="31" count="0" type="stmt"/>
       </file>
       <file name="correo.services.js" path="C:\Users\USUARIO\Desktop\BackendMoviles\A-C-Soluciones-M-C\src\services\correo.services.js">
         <metrics statements="22" coveredstatements="0" conditionals="14" coveredconditionals="0" methods="4" coveredmethods="0"/>
