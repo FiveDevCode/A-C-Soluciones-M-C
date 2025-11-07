@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>6/6</span>
+                <span class='fraction'>0/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>0/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>0/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>6/6</span>
+                <span class='fraction'>0/6</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -135,7 +135,7 @@
 <a name='L70'></a><a href='#L70'>70</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -152,8 +152,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -168,8 +168,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -198,13 +198,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { DataTypes } from 'sequelize';
 import { sequelize } from '../database/conexion.js';
 &nbsp;
-const Faq = sequelize.define('Faq', {
+const Faq = <span class="cstat-no" title="statement not covered" >sequelize.define('Faq', {</span>
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
@@ -220,9 +220,9 @@ const Faq = sequelize.define('Faq', {
         args: [5, 350],
         msg: 'La pregunta debe tener entre 5 y 350 caracteres.'
       },
-      noEspacios(value) {
-        if (value.trim() !== value) {
-          throw new Error('La pregunta no debe comenzar ni terminar con espacios.');
+<span class="fstat-no" title="function not covered" >      no</span>Espacios(value) {
+<span class="cstat-no" title="statement not covered" >        if (value.trim() !== value) {</span>
+<span class="cstat-no" title="statement not covered" >          throw new Error('La pregunta no debe comenzar ni terminar con espacios.');</span>
         }
       }
     }
@@ -236,9 +236,9 @@ const Faq = sequelize.define('Faq', {
         args: [5, 500],
         msg: 'La respuesta debe tener entre 5 y 500 caracteres.'
       },
-      noEspacios(value) {
-        if (value.trim() !== value) {
-          throw new Error('La respuesta no debe comenzar ni terminar con espacios.');
+<span class="fstat-no" title="function not covered" >      no</span>Espacios(value) {
+<span class="cstat-no" title="statement not covered" >        if (value.trim() !== value) {</span>
+<span class="cstat-no" title="statement not covered" >          throw new Error('La respuesta no debe comenzar ni terminar con espacios.');</span>
         }
       }
     }
@@ -267,7 +267,7 @@ const Faq = sequelize.define('Faq', {
   timestamps: false
 });
 &nbsp;
-export const FaqModel = {
+export const FaqModel = <span class="cstat-no" title="statement not covered" >{</span>
   Faq
 };
 &nbsp;</pre></td></tr></table></pre>
@@ -277,7 +277,7 @@ export const FaqModel = {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-10-24T16:35:15.673Z
+                at 2025-11-06T22:50:50.729Z
             </div>
         <script src="../prettify.js"></script>
         <script>

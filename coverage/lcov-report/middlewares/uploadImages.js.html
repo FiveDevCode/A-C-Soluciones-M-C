@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>11/11</span>
+                <span class='fraction'>0/11</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>5/5</span>
+                <span class='fraction'>0/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>3/3</span>
+                <span class='fraction'>0/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>11/11</span>
+                <span class='fraction'>0/11</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -98,29 +98,29 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -129,29 +129,29 @@
 import path from 'path';
 import fs from 'fs';
 &nbsp;
-const storage = multer.diskStorage({
-  destination: (req, file, cb) =&gt; {
-    const dir = 'uploads/fotos_fichas';
-    fs.mkdirSync(dir, { recursive: true });
-    cb(null, dir);
+const storage = <span class="cstat-no" title="statement not covered" >multer.diskStorage({</span>
+  destination: <span class="fstat-no" title="function not covered" >(r</span>eq, file, cb) =&gt; {
+    const dir = <span class="cstat-no" title="statement not covered" >'uploads/fotos_fichas';</span>
+<span class="cstat-no" title="statement not covered" >    fs.mkdirSync(dir, { recursive: true });</span>
+<span class="cstat-no" title="statement not covered" >    cb(null, dir);</span>
   },
-  filename: (req, file, cb) =&gt; {
-    const uniqueName = `${Date.now()}_${file.originalname}`;
-    cb(null, uniqueName);
+  filename: <span class="fstat-no" title="function not covered" >(r</span>eq, file, cb) =&gt; {
+    const uniqueName = <span class="cstat-no" title="statement not covered" >`${Date.now()}_${file.originalname}`;</span>
+<span class="cstat-no" title="statement not covered" >    cb(null, uniqueName);</span>
   },
 });
 &nbsp;
-const upload = multer({
+const upload = <span class="cstat-no" title="statement not covered" >multer({</span>
   storage,
   limits: {
     fileSize: 5 * 1024 * 1024, // Limite de 5MB
   },
-  fileFilter: (req, file, cb) =&gt; {
-    const ext = path.extname(file.originalname).toLowerCase();
-    if (ext !== '.jpg' &amp;&amp; ext !== '.jpeg' &amp;&amp; ext !== '.png') {
-      return cb(new Error('Solo se permiten imágenes (JPG, JPEG, PNG)'));
+  fileFilter: <span class="fstat-no" title="function not covered" >(r</span>eq, file, cb) =&gt; {
+    const ext = <span class="cstat-no" title="statement not covered" >path.extname(file.originalname).toLowerCase();</span>
+<span class="cstat-no" title="statement not covered" >    if (ext !== '.jpg' &amp;&amp; ext !== '.jpeg' &amp;&amp; ext !== '.png') {</span>
+<span class="cstat-no" title="statement not covered" >      return cb(new Error('Solo se permiten imágenes (JPG, JPEG, PNG)'));</span>
     }
-    cb(null, true);
+<span class="cstat-no" title="statement not covered" >    cb(null, true);</span>
   },
 });
 &nbsp;
@@ -163,7 +163,7 @@ export default upload;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-10-24T16:35:15.673Z
+                at 2025-11-06T22:50:50.729Z
             </div>
         <script src="../prettify.js"></script>
         <script>

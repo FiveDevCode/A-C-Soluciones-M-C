@@ -43,7 +43,8 @@ App.use(cors({
      'https://a-c-soluciones.vercel.app',
      'capacitor://localhost',
       'http://localhost:3000',
-      'http://127.0.0.1:3000'
+      'http://127.0.0.1:3000', 
+      'http://localhost:5173' 
     ];
 
     if (!origin || allowedOrigins.includes(origin)) {
