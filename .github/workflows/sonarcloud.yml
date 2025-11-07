@@ -31,10 +31,10 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: ./backend
+        working-directory: ./Backend
 
       - name: Install frontend dependencies
-        working-directory: ./frontend
+        working-directory: ./Frontend
         run: npm install
 
 
