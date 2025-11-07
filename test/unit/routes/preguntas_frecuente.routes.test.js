@@ -1,7 +1,6 @@
 // test/unit/routes/preguntas_frecuentes.routes.test.js
 import express from 'express';
 
-// Mock de dependencias principales
 jest.mock('express', () => ({
   Router: jest.fn(() => ({
     get: jest.fn(),
@@ -26,7 +25,7 @@ jest.mock('../../../src/middlewares/autenticacion.js', () => ({
   isAdmin: jest.fn(),
 }));
 
-// Importar después de los mocks
+// Importar despue de los mocks
 import router from '../../../src/routers/preguntas_frecuentes.routes.js';
 import { FaqController } from '../../../src/controllers/preguntas_freceuntes.controller.js';
 import { authenticate, isAdmin } from '../../../src/middlewares/autenticacion.js';
@@ -46,7 +45,7 @@ describe('Preguntas Frecuentes (FAQ) Router', () => {
     expect(FaqController).toHaveBeenCalledTimes(1);
   });
 
-  // 🔹 Rutas públicas
+  // Rutas publicas
   it('debería tener la ruta GET /api/faqs configurada correctamente', () => {
     expect(mockRouterInstance.get).toHaveBeenCalledWith(
       '/api/faqs',
@@ -61,7 +60,7 @@ describe('Preguntas Frecuentes (FAQ) Router', () => {
     );
   });
 
-  // 🔹 Rutas protegidas
+  // Rutas protegidas
   it('debería tener la ruta POST /api/faqs configurada correctamente', () => {
     expect(mockRouterInstance.post).toHaveBeenCalledWith(
       '/api/faqs',

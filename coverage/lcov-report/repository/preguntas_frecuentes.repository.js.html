@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>6/6</span>
+                <span class='fraction'>0/6</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>6/6</span>
+                <span class='fraction'>0/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>6/6</span>
+                <span class='fraction'>0/6</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -96,58 +96,58 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { FaqModel } from "../models/preguntas_frecuentes.model.js";
 &nbsp;
 export class FaqRepository {
-  async crear(faqData) {
-    return await FaqModel.Faq.create(faqData);
+<span class="fstat-no" title="function not covered" >  as</span>ync crear(faqData) {
+<span class="cstat-no" title="statement not covered" >    return await FaqModel.Faq.create(faqData);</span>
   }
 &nbsp;
-  async obtenerTodos() {
-    return await FaqModel.Faq.findAll();
+<span class="fstat-no" title="function not covered" >  as</span>ync obtenerTodos() {
+<span class="cstat-no" title="statement not covered" >    return await FaqModel.Faq.findAll();</span>
   }
 &nbsp;
-  async obtenerPorCategoria(categoria) {
-    return await FaqModel.Faq.findAll({
+<span class="fstat-no" title="function not covered" >  as</span>ync obtenerPorCategoria(categoria) {
+<span class="cstat-no" title="statement not covered" >    return await FaqModel.Faq.findAll({</span>
       where: { categoria }
     });
   }
 &nbsp;
-  async obtenerPorId(id) {
-    return await FaqModel.Faq.findByPk(id);
+<span class="fstat-no" title="function not covered" >  as</span>ync obtenerPorId(id) {
+<span class="cstat-no" title="statement not covered" >    return await FaqModel.Faq.findByPk(id);</span>
   }
 &nbsp;
-  async actualizar(id, data) {
-    return await FaqModel.Faq.update(data, { where: { id } });
+<span class="fstat-no" title="function not covered" >  as</span>ync actualizar(id, data) {
+<span class="cstat-no" title="statement not covered" >    return await FaqModel.Faq.update(data, { where: { id } });</span>
   }
 &nbsp;
-  async eliminar(id) {
-    return await FaqModel.Faq.destroy({ where: { id } });
+<span class="fstat-no" title="function not covered" >  as</span>ync eliminar(id) {
+<span class="cstat-no" title="statement not covered" >    return await FaqModel.Faq.destroy({ where: { id } });</span>
   }
 }
 &nbsp;</pre></td></tr></table></pre>
@@ -157,7 +157,7 @@ export class FaqRepository {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-10-24T16:35:15.673Z
+                at 2025-11-06T22:50:50.729Z
             </div>
         <script src="../prettify.js"></script>
         <script>

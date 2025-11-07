@@ -2,7 +2,7 @@ import { DataTypes } from 'sequelize';
 import { encryptPasswordHook } from '../../../src/hooks/encryptPassword.js';
 import { AdminModel } from '../../../src/models/administrador.model.js';
 
-//Mock de sequelize para no afectar la BD real durante los test
+//Mock para no afectar la BD real durante los test
 jest.mock('../../../src/database/conexion.js', () => ({
   sequelize: {
     define: jest.fn((modelName, attributes, options) => ({
@@ -47,7 +47,7 @@ describe('AdminModel', () => {
     expect(Admin.attributes.estado.defaultValue).toBe('activo');
   });
 
-  //Ahora dentro de beforeAll para asegurar que Admin esté cargado
+  //Ahora dentro de beforeAll para asegurar que Admin cargo
   describe('Validaciones de numero_cedula', () => {
     let validate;
 

@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>10/10</span>
+                <span class='fraction'>0/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>0/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>0/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>10/10</span>
+                <span class='fraction'>0/10</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -107,11 +107,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -120,16 +118,18 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -144,9 +144,9 @@ import { crearFichaMantenimiento, listarFichas} from '../controllers/ficha_mante
 import { isAdminOrTecnico, isCliente, authenticate} from '../middlewares/autenticacion.js';
 import upload from '../middlewares/uploadImages.js';
 &nbsp;
-const router = express.Router();
+const router = <span class="cstat-no" title="statement not covered" >express.Router();</span>
 &nbsp;
-router.post(
+<span class="cstat-no" title="statement not covered" >router.post(</span>
   '/fichas', authenticate,
   isAdminOrTecnico,
   upload.fields([
@@ -157,16 +157,16 @@ router.post(
   crearFichaMantenimiento
 );
 &nbsp;
-router.get('/fichas', authenticate, isAdminOrTecnico, listarFichas);
+<span class="cstat-no" title="statement not covered" >router.get('/fichas', authenticate, isAdminOrTecnico, listarFichas);</span>
 &nbsp;
-router.get('/descargar/:nombreArchivo', authenticate, isCliente, (req, res) =&gt; {
-  const { nombreArchivo } = req.params;
-  const filePath = path.resolve(`uploads/fichas/${nombreArchivo}`);
+<span class="cstat-no" title="statement not covered" >router.get('/descargar/:nombreArchivo', authenticate, isCliente, <span class="fstat-no" title="function not covered" >(r</span>eq, res) =&gt; {</span>
+  const { nombreArchivo } = <span class="cstat-no" title="statement not covered" >req.params;</span>
+  const filePath = <span class="cstat-no" title="statement not covered" >path.resolve(`uploads/fichas/${nombreArchivo}`);</span>
 &nbsp;
-  res.sendFile(filePath, (err) =&gt; {
-    if (err) {
-      console.error('Error enviando archivo:', err);
-      return res.status(404).json({ error: 'Archivo no encontrado' });
+<span class="cstat-no" title="statement not covered" >  res.sendFile(filePath, <span class="fstat-no" title="function not covered" >(e</span>rr) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    if (err) {</span>
+<span class="cstat-no" title="statement not covered" >      console.error('Error enviando archivo:', err);</span>
+<span class="cstat-no" title="statement not covered" >      return res.status(404).json({ error: 'Archivo no encontrado' });</span>
     }
   });
 });
@@ -181,7 +181,7 @@ export default router;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-10-24T16:35:15.673Z
+                at 2025-11-06T22:50:50.729Z
             </div>
         <script src="../prettify.js"></script>
         <script>
