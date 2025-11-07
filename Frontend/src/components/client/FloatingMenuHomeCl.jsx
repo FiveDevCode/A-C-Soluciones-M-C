@@ -61,11 +61,11 @@ const FloatingMenuHomeCl = forwardRef((props, ref) => {
   return (
     <ContainerFloating ref={ref} data-testid="floating-menu">
       <Option to="/cliente/perfil">
-        <OptionText>Perfil</OptionText>
+        <OptionText data-testid="floating-menu-perfil">Perfil</OptionText>
       </Option>
       <Divider />
       <OptionClose onClick={handleLogout}>
-        <OptionText>Cerrar sesión</OptionText>
+        <OptionText data-testid="floating-menu-logout">Cerrar sesión</OptionText>
       </OptionClose>
     </ContainerFloating>
   )

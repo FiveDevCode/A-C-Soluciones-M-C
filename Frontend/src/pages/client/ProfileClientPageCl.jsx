@@ -141,7 +141,7 @@ const ProfileClientPageCl = () => {
           />
           <h2>{`${userClient.nombre} ${userClient.apellido}`}</h2>
         </ProfileInfo>
-        <ButtonProfile variant='contained' LinkComponent={Link} to="/cliente/editar-perfil">Editar infomarcion</ButtonProfile>
+        <ButtonProfile data-testid="edit-profile-btn" variant='contained' LinkComponent={Link} to="/cliente/editar-perfil">Editar infomarcion</ButtonProfile>
       
       </ProfileSection>
 

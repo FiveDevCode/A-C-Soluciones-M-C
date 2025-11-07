@@ -68,7 +68,7 @@ const ServiceOpenCl = ({servicio, onClose }) => {
         </ContainerDescription>
         <ContainerButton>
           <Button variant="contained" style={{backgroundColor: "#17A2B8"}} onClick={onClose}>Cancelar</Button>
-          <Button
+          <Button data-testid="solicitar-revision-btn"
             variant="contained"
             onClick={() => setShowRequestScreen(true)}
           >

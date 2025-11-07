@@ -166,7 +166,7 @@ const RecommendedServiceFullWidth = ({
         <TextSection>
           <Title>{service.nombre}</Title>
           <Description>{service.descripcion}</Description>
-          <ActionButton onClick={() => setSelectedService(service)} color={color}>
+          <ActionButton data-testid="ver-mas-button" onClick={() => setSelectedService(service)} color={color}>
             Ver más
           </ActionButton>
         </TextSection>

@@ -170,13 +170,13 @@ const MenuSideCl = ({ onClose }) => {
             <IconOption 
               icon={faHouse}           
             />
-            <TitleOption>Inicio</TitleOption>
+            <TitleOption data-testid="home-btn">Inicio</TitleOption>
           </ContainerOption>
           <ContainerOption to="/cliente/servicios">
             <IconOption 
               icon={faWrench} 
             />
-            <TitleOption>Servicios</TitleOption>
+            <TitleOption data-testid="servicios-btn">Servicios</TitleOption>
           </ContainerOption>
         </ContainerAllOption>
         <ContainerAllConfiguration>

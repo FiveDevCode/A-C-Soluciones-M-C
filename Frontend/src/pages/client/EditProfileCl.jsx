@@ -232,6 +232,7 @@ const EditProfileCl = () => {
       <Form onSubmit={handleSubmit}>
         <TextField 
           label="Cedula" 
+          data-testid="input-cedula"
           fullWidth 
           size="medium" 
           value={IdCard} 
@@ -241,7 +242,8 @@ const EditProfileCl = () => {
           helperText={fieldErrors.numero_de_cedula}
         />
         <TextField 
-          label="Nombre" 
+          label="Nombre"
+          data-testid="input-nombre"
           fullWidth 
           size="medium" 
           value={nameUser} 
@@ -252,6 +254,7 @@ const EditProfileCl = () => {
         />
         <TextField 
           label="Apellido" 
+          data-testid="input-apellido"
           fullWidth 
           size="medium" 
           value={lastName} 
@@ -262,6 +265,7 @@ const EditProfileCl = () => {
         />
         <TextField 
           label="Correo electrónico" 
+          data-testid="input-email"
           fullWidth 
           size="medium" 
           value={email} 
@@ -272,6 +276,7 @@ const EditProfileCl = () => {
         /> 
         <TextField 
           label="Dirrecion" 
+          data-testid="input-direccion"
           fullWidth 
           size="medium" 
           value={address} 
@@ -282,6 +287,7 @@ const EditProfileCl = () => {
         /> 
         <TextField 
           label="Celular" 
+          data-testid="input-celular"
           fullWidth 
           size="medium" 
           value={phone} 
@@ -330,7 +336,7 @@ const EditProfileCl = () => {
           </Alert>
         </Collapse>
         <ContainerButton>
-          <Button type="submit" variant="contained" disabled={isSubmitting || !hasChanges()}>
+          <Button data-testid="btn-guardar" type="submit" variant="contained" disabled={isSubmitting || !hasChanges()}>
             {isSubmitting ? "Guardando..." : "Guardar cambios"}
           </Button>
           <Button type="button" variant="contained" onClick={() => navigate(-1)}>Cancelar</Button>

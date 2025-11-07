@@ -110,6 +110,7 @@ const ScreenRequestCl = ({ requestId, onClose }) => {
         <Form onSubmit={handleSubmit}>
           <TextField 
             label="Dirección de servicio" 
+            data-testid="input-direccion-servicio"
             fullWidth size="medium" 
             value={serviceAddress} 
             onChange={(e) => setServiceAddress(e.target.value)}
@@ -126,6 +127,7 @@ const ScreenRequestCl = ({ requestId, onClose }) => {
           />
           <TextField 
             label="Descripcion del problema" 
+            data-testid="input-descripcion-problema"
             fullWidth size="medium" 
             value={description} 
             onChange={(e) => setDescription(e.target.value)}
@@ -142,6 +144,7 @@ const ScreenRequestCl = ({ requestId, onClose }) => {
           />
           <TextField 
             label="Comentarios" 
+            data-testid="input-comentarios-adicionales"
             fullWidth size="medium" 
             value={comments} 
             onChange={(e) => setComments(e.target.value)}
@@ -166,7 +169,7 @@ const ScreenRequestCl = ({ requestId, onClose }) => {
 
           <ContainerButton>
             <Button variant='contained' onClick={onClose}>Cancelar</Button> 
-            <Button type='submit' variant='contained'>Confirmar</Button> 
+            <Button data-testid="confirmar-solicitud-btn" type='submit' variant='contained'>Confirmar</Button> 
           </ContainerButton>
         </Form>
         {showSuccess && (

@@ -156,7 +156,7 @@ const HeaderBarCl = () => {
     <ContainerHeader>
       <MenuBar>
         <ButtonProfile ref={profileButtonRef} onClick={handleShowMenu}>
-          <FontAwesomeIcon icon={faCircleUser} style={{ fontSize: "24px" }} />
+          <FontAwesomeIcon data-testid="profile-icon" icon={faCircleUser} style={{ fontSize: "24px" }} />
         </ButtonProfile>
         {show && <FloatingMenuHomeCl ref={menuRef} handleLogout={handleLogout} />}
 

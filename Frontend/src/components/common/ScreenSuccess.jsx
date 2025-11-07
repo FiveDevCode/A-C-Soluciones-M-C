@@ -69,7 +69,7 @@ const ScreenSuccess = ({children, onClose}) => {
         <MessageSuccess>{children}</MessageSuccess>
         <CloseContent>
           <ButtonCloseIcon onClick={onClose}><FontAwesomeIcon icon={faX} style={{fontSize:"18px"}}/></ButtonCloseIcon>
-          <ButtonClose onClick={onClose}>CERRAR</ButtonClose>
+          <ButtonClose data-testid="cerrar-btn" onClick={onClose}>CERRAR</ButtonClose>
         </CloseContent>
          
 

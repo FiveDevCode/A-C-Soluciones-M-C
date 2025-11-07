@@ -167,6 +167,7 @@ const ServicesAllPageCl = () => {
       <Box sx={{ display: 'flex', justifyContent: 'start', mt: 3, mb: 2, ml: "8rem" }}>
         <TextField
           variant="outlined"
+          data-testid="input-buscar-servicio"
           size="small"
           value={filterText}
           onChange={(e) => {
