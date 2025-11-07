@@ -1,4 +1,3 @@
-// src/controllers/admin.controller.js
 import { AdminService } from '../services/administrador.services.js';
 import { ValidationError } from 'sequelize';
 
@@ -180,4 +179,5 @@ export class AdminController {
       });
     }
   };
+  // Otros métodos del controlador pueden ir aquí
 }

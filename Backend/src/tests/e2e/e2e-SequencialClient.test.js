@@ -24,6 +24,7 @@ describe('E2E SECUENCIAL - Selenium Tests (Modo Visible y Lento)', () => {
     if (driver) await driver.quit();
   });
 
+  // Test: Cliente edita su perfil
   test('Cliente puede editar su perfil correctamente', async () => {
     // LOGIN
     await driver.get('http://localhost:5173/iniciar-sesion');
@@ -69,7 +70,7 @@ describe('E2E SECUENCIAL - Selenium Tests (Modo Visible y Lento)', () => {
         // Borrar correctamente el texto previo
         await el.click(); // enfoca el campo
         await delay(300);
-        await el.sendKeys(process.platform === 'darwin' ? Key.COMMAND : Key.CONTROL, 'a'); // Ctrl+A o Cmd+A
+        await el.sendKeys(process.platform === 'darwin' ? Key.COMMAND : Key.CONTROL, 'a');
         await delay(200);
         await el.sendKeys(Key.BACK_SPACE); // eliminar contenido
         await delay(300);
